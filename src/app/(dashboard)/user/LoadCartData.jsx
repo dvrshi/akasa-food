@@ -58,7 +58,7 @@ function LoadCartData({ session }) {
                         id: item.id,
                         name: item.name,
                         price: item.price,
-                        quantity: item.stockQuantity // Assuming `stockQuantity` represents the quantity available in stock
+                        quantity: item.stockQuantity 
                     };
                     return acc;
                 }, {});
@@ -111,7 +111,9 @@ function LoadCartData({ session }) {
             console.error('Error placing order:', error);
         }
     };
-
+    const [color,setbgcolor] = useState(true);
+    // setbgcolor(!color)
+    
     return (
         <div>
             <div className="font-semibold mb-4">Cart Items</div>
@@ -140,6 +142,7 @@ function LoadCartData({ session }) {
                     <div className="mt-4">
                         <h3 className="font-semibold">Total Price: ${calculateTotalPrice().toFixed(2)}</h3>
                         <button className="bg-orange-600 text-white px-4 py-2 rounded-md mt-2" onClick={placeOrder}>Place Order</button>
+                        <button className={`bg-${color?'white':'black'}`} onClick={()=>{setbgcolor(!color)}}>Change Color</button>
                     </div>
                 </div>
             ) : (

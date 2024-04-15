@@ -8,7 +8,7 @@ function LoadOrderHistory({ session }) {
         async function fetchData() {
             try {
                 const getOrderData = {
-                    gettingOrder: true,
+                    
                     email: session.user.email,
                 };
                 const response = await fetch('/api/cart_pull', {
