@@ -1,5 +1,5 @@
 # WebApp README
-
+# The website is down as now, as the Supabase automatically shuts down the hosted database if there is no activity on it for 7 days.
 This repository contains the code base for a web application built using Next.js, deployed on Vercel, styled with Tailwind CSS, and utilizing various other frameworks and technologies for database management, user authentication, and UI components.
 
 ## Tech Stack
